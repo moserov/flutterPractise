@@ -35,9 +35,17 @@ class HomePage extends StatelessWidget {
 
           _buildDayCard(
             context,
-            title: 'Day 2',
-            subtitle: 'Sy',
-            route: '/day1',
+            title: 'Day 2: "Body" - Layout and UI',
+            subtitle: 'Constraints go down, sizes go up',
+            route: '/day2',
+            color: Colors.blueAccent.withOpacity(0.1),
+          ),
+
+          _buildDayCard(
+            context,
+            title: 'Day 2: Goofing Around',
+            subtitle: 'Blabla',
+            route: '/day2_selfmade',
             color: Colors.blueAccent.withOpacity(0.1),
           ),
         ],
@@ -45,7 +53,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // Helper to build cards (Keep it DRY, Lars loves DRY)
+  // Helper to build cards 
   Widget _buildDayCard(BuildContext context,
       {required String title,
       required String subtitle,
@@ -58,14 +66,14 @@ class HomePage extends StatelessWidget {
       child: ListTile(
         contentPadding: const EdgeInsets.all(15),
         title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: Text(subtitle),
+        subtitle: Text(subtitle, style: const TextStyle(color: Colors.grey)),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
         onTap: () => Navigator.pushNamed(context, route),
       ),
     );
   }
 
-  // The Top Menu logic
+  // Top Menu 
   Widget _buildNavigationDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
@@ -80,12 +88,19 @@ class HomePage extends StatelessWidget {
             title: const Text('Day 1 Basics'),
             onTap: () => Navigator.pushNamed(context, '/day1'),
           ),
+          ListTile(
+            title: const Text('Day 2 UI'),
+            onTap: () => Navigator.pushNamed(context, '/day2'),
+          ),
+          ListTile(
+            title: const Text('Day 2 Goofy'),
+            onTap: () => Navigator.pushNamed(context, '/day2_selfmade'),
+          ),
         ],
       ),
     );
   }
 
-  // Cleaned up AppBar
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return AppBar(
       title: const Text('Roadmap',
@@ -94,7 +109,7 @@ class HomePage extends StatelessWidget {
       elevation: 0,
       centerTitle: true,
       actions: [
-        // This button opens the endDrawer
+        // This button opens endDrawer
         Builder(
           builder: (context) => IconButton(
             icon: const Icon(Icons.menu_book, color: Colors.black),
