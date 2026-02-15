@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roadmap/models/user_model.dart';
+import 'package:roadmap/domain/models/user_model.dart';
 
 class Day1BasicsPage extends StatefulWidget {
   final String title;

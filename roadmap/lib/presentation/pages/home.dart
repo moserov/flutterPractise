@@ -48,6 +48,14 @@ class HomePage extends StatelessWidget {
             route: '/day2_selfmade',
             color: Colors.blueAccent.withOpacity(0.1),
           ),
+
+          _buildDayCard(
+            context,
+            title: 'Day 3: Networking',
+            subtitle: 'Fetching data from the internet',
+            route: '/day3',
+            color: Colors.blueAccent.withOpacity(0.1),
+          ),
         ],
       ),
     );
@@ -95,6 +103,10 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: const Text('Day 2 Goofy'),
             onTap: () => Navigator.pushNamed(context, '/day2_selfmade'),
+          ),
+          ListTile(
+            title: const Text('Day 3 Network'),
+            onTap: () => Navigator.pushNamed(context, '/day3'),
           ),
         ],
       ),
