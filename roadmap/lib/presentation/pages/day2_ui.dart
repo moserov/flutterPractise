@@ -81,7 +81,7 @@ class Day2LayoutsPage extends StatelessWidget {
   }
 }
 
-// Senior Move: Break the UI into a reusable component
+// Break the UI into a reusable component
 class StatCard extends StatelessWidget {
   final String label;
   final String value;

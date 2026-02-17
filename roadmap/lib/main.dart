@@ -4,6 +4,7 @@ import 'package:roadmap/presentation/pages/day1_basics.dart';
 import 'package:roadmap/presentation/pages/day2_ui.dart';
 import 'package:roadmap/presentation/pages/day2_selfmade.dart';
 import 'package:roadmap/presentation/pages/day3_networking.dart';
+import 'package:roadmap/presentation/pages/day4_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/day2_selfmade': (context) =>
             const Day2SelfMadePage(title: "Day 2: Fun with images"),
         '/day3': (context) => const Day3NetworkingPage(title: "Day 3: Faking a network call",),
+        '/day4': (context) => const Day4BlocPage(title: "Day 4: Introducing BLoC",),
       },
     );
   }

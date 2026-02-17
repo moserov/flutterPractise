@@ -10,7 +10,6 @@ class Day3NetworkingPage extends StatefulWidget {
 }
 
 class _Day3NetworkingPageState extends State<Day3NetworkingPage> {
-  // Instantiate the repository
   final PostRepository _postRepo = PostRepository();
 
   // Late initialization of the future to avoid re-fetching on every build
@@ -19,7 +18,7 @@ class _Day3NetworkingPageState extends State<Day3NetworkingPage> {
   @override
   void initState() {
     super.initState();
-    _postsFuture = _postRepo.fetchPosts(); // Trigger once on mount
+    _postsFuture = _postRepo.fetchPosts(); // Trigger once on mount (like UseEffect in React)
   }
 
   @override
@@ -47,6 +46,7 @@ class _Day3NetworkingPageState extends State<Day3NetworkingPage> {
               return Card(
                 margin: const EdgeInsets.all(8),
                 child: ListTile(
+                  //textColor: Colors.cyan,
                   title: Text(posts[index]['title']!),
                   subtitle: Text(posts[index]['body']!),
                   leading: const Icon(Icons.article),

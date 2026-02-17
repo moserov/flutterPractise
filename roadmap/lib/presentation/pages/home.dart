@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
             title: 'Day 1: Dart & Widgets',
             subtitle: 'Stateless vs Stateful, Null Safety',
             route: '/day1',
-            color: Colors.blueAccent.withOpacity(0.1),
+            color: Colors.blueAccent.withValues(alpha: 0.1),
           ),
 
           _buildDayCard(
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
             title: 'Day 2: "Body" - Layout and UI',
             subtitle: 'Constraints go down, sizes go up',
             route: '/day2',
-            color: Colors.blueAccent.withOpacity(0.1),
+            color: Colors.blueAccent.withValues(alpha: 0.1),
           ),
 
           _buildDayCard(
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
             title: 'Day 2: Goofing Around',
             subtitle: 'Blabla',
             route: '/day2_selfmade',
-            color: Colors.blueAccent.withOpacity(0.1),
+            color: Colors.blueAccent.withValues(alpha: 0.1),
           ),
 
           _buildDayCard(
@@ -54,14 +54,21 @@ class HomePage extends StatelessWidget {
             title: 'Day 3: Networking',
             subtitle: 'Fetching data from the internet',
             route: '/day3',
-            color: Colors.blueAccent.withOpacity(0.1),
+            color: Colors.blueAccent.withValues(alpha: 0.1),
+          ),
+          _buildDayCard(
+            context,
+            title: 'Day 4: BLoC',
+            subtitle: 'Introducing the chef BLoC',
+            route: '/day4',
+            color: Colors.blueAccent.withValues(alpha: 0.1),
           ),
         ],
       ),
     );
   }
 
-  // Helper to build cards 
+  // Helper to build cards
   Widget _buildDayCard(BuildContext context,
       {required String title,
       required String subtitle,
@@ -81,7 +88,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // Top Menu 
+  // Top Menu
   Widget _buildNavigationDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
@@ -107,6 +114,10 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: const Text('Day 3 Network'),
             onTap: () => Navigator.pushNamed(context, '/day3'),
+          ),
+          ListTile(
+            title: const Text('Day 4 BLoC'),
+            onTap: () => Navigator.pushNamed(context, '/day4'),
           ),
         ],
       ),

@@ -13,7 +13,7 @@ class PostRepository {
       },
       {
         'title': 'The Power of BLoC',
-        'body': 'Tomorrow we move from FutureBuilder to BLoC for state.'
+        'body': 'On Day 4 from FutureBuilder to BLoC for state.'
       },
     ];
   }
